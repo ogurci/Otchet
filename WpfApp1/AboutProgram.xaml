@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.AboutProgram"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="О программе" Height="516" Width="999" Icon="/icon.png" ResizeMode="NoResize" Background="White">
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="/logo.png" Stretch="Uniform" Opacity="0.4">
+                <ImageBrush.Transform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.4" ScaleY="0.4"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="700" Y="0"/>
+                    </TransformGroup>
+                </ImageBrush.Transform>
+            </ImageBrush>
+        </Grid.Background>
+        <Label FontSize="15" Content="Состав функций.&#xA;К функциям программы можно отнести: &#xA;1.Выбор даты для заполнения данных;&#xA;2. Создание дневного отчёта; &#xA;3. Создание недельного отчёта;&#xA;4. Обновление данных таблиц;&#xA;&#xA;Функция «Выбор даты для заполнения данных»&#xA;Выбор даты производиться при нажатии на нужную неделю в календаре. После чего двойное нажатие на кнопку «Далее».&#xA;&#xA;Функция «Создания дневного отчёта»&#x9;&#xA;Выбор дня производится при нажатии на нужную дату, если выбирать предыдущую дату или дату,&#xA;для которой данные уже заполнены, появиться окно с выбором кнопок «Вывести отчёт», с помощью которой можно просмотреть отчёт &#xA;в файле Word, и «Обновить данные», с помощью которой можно внести изменения в отчёт.  &#xA;&#xA;Функция «Создание недельного отчёта»&#xA;Создание недельного отчёта производится при нажатии на кнопку «Недельный отчёт», который можно посмотреть в файле Word.  &#xA;&#xA;Функция «Обновление данных таблиц»&#xA;Обновление данных таблиц производится при нажатии на кнопку «Обновить данные», с помощью которой можно внести изменения&#xA; в отчёт.&#xA;                                                                                                                Программу разработали Кисляков И.А., Минеев В.А., Антончик Д.А." HorizontalAlignment="Left" VerticalAlignment="Center" Height="460" Width="967" Margin="10,0,0,0"/>
+
+    </Grid>
+</Window>

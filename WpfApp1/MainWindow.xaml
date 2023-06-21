@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Главная" Height="450" Width="800" ResizeMode="NoResize" Icon="/icon.png" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Margin="208,0,202,144" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <Label Width="322" Height="50" Content="ГКУ МО МОСОБЛПОЖСПАС" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="1">
+            <Border.Background>
+                <ImageBrush ImageSource="logo.png" Stretch="Uniform"/>
+            </Border.Background>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="2">
+            <Button Height="50" Width="150" Content="Создать отчёт" Cursor="Hand" Background="#FF1676C3" BorderBrush="#FF164B75" BorderThickness="2" Foreground="White" FontSize="14" Click="Add_Click"/>
+        </Border>
+        <Menu Grid.Row="0" Height="24" VerticalAlignment="Top" Background="#FF1676C3" Grid.ColumnSpan="3">
+            <MenuItem Header="Журнал .log" Click="MenuItem_Click"/>
+            <MenuItem Header="О программе" Height="23" Click="MenuItem_Click_1"/>
+        </Menu>
+    </Grid>
+</Window>
